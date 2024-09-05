@@ -31,8 +31,17 @@
                 return true;
             }
             return false;
-
         }
+
+        public bool Contains(LineSegment anotherSegment)
+        {
+            if (anotherSegment.Start >= Start && anotherSegment.End <= End)
+            {
+                return true;
+            }
+            return false;
+        }
+
 
     }
 }
