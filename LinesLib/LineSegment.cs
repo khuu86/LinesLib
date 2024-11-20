@@ -5,8 +5,7 @@
         public int Start { get; }
         public int End { get; }
 
-
-
+        // Constructor to initialize the LineSegment with start and end values
         public LineSegment(int start, int end)
         {
             Start = start;
@@ -18,14 +17,15 @@
             }
         }
 
+        // Override ToString() method to provide a string representation of the LineSegment
         public override string ToString()
         {
             return $"{Start}, {End}";
         }
 
+        // Check if the LineSegment contains a point
         public bool Contains(int p)
         {
-
             if (Start <= p && p <= End)
             {
                 return true;
@@ -33,6 +33,7 @@
             return false;
         }
 
+        // Check if the LineSegment contains another LineSegment
         public bool Contains(LineSegment anotherSegment)
         {
             if (anotherSegment.Start >= Start && anotherSegment.End <= End)
@@ -41,7 +42,5 @@
             }
             return false;
         }
-
-
     }
 }
